@@ -1,0 +1,1693 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayers Variety & Hardware | Westover's Neighborhood Hardware Store</title>
+  <meta name="description" content="Ayers Variety & Hardware in Arlington, VA is Westover's old-school neighborhood hardware and variety store for home repair, housewares, gifts, garden supplies, toys, and practical local advice.">
+  <meta name="theme-color" content="#273f36">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23273f36'/%3E%3Ccircle cx='32' cy='32' r='22' fill='%23944839' stroke='%23fffdf7' stroke-width='3'/%3E%3Cpath d='M22 39 39 22l4 4-17 17-7 2 3-6Z' fill='%23fffdf7'/%3E%3C/svg%3E">
+  <link rel="canonical" href="https://rohan-website.github.io/ayers/">
+  <meta property="og:title" content="Ayers Variety & Hardware">
+  <meta property="og:description" content="Westover's distinctive neighborhood hardware and variety store since 1948.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rohan-website.github.io/ayers/">
+  <meta property="og:image" content="https://cdn9.localdatacdn.com/va/arlington/2888156/original/UwykEikC3X.jpg">
+  <style>
+    :root {
+      --ink: #1e211d;
+      --muted: #5d6258;
+      --paper: #fbfaf5;
+      --linen: #f1eadf;
+      --sage: #273f36;
+      --leaf: #5a7c62;
+      --brass: #b87736;
+      --brick: #944839;
+      --blue: #41687f;
+      --cream: #fffdf7;
+      --line: rgba(30, 33, 29, .14);
+      --shadow: 0 20px 60px rgba(28, 32, 26, .16);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -48px;
+      z-index: 200;
+      padding: 10px 14px;
+      color: #fff;
+      background: var(--sage);
+      border-radius: var(--radius);
+      transition: top .2s ease;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .topbar {
+      color: #fff;
+      background: var(--sage);
+      font-size: .93rem;
+    }
+
+    .topbar__inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, .35);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(251, 250, 245, .92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 74px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      min-width: 0;
+    }
+
+    .brand__mark {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--brick);
+      border: 2px solid var(--sage);
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 4px rgba(255, 255, 255, .17);
+      flex: 0 0 auto;
+    }
+
+    .brand__mark svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .brand__text {
+      display: grid;
+      line-height: 1.05;
+    }
+
+    .brand__name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand__tag {
+      color: var(--muted);
+      font-size: .82rem;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav__links {
+      justify-self: end;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav__links a {
+      padding: 10px 12px;
+      color: var(--muted);
+      text-decoration: none;
+      border-radius: var(--radius);
+      font-size: .95rem;
+      font-weight: 700;
+    }
+
+    .nav__links a:hover,
+    .nav__links a:focus-visible {
+      color: var(--ink);
+      background: rgba(90, 124, 98, .14);
+      outline: none;
+    }
+
+    .icon-btn,
+    .menu-btn {
+      width: 44px;
+      height: 44px;
+      display: inline-grid;
+      place-items: center;
+      color: var(--sage);
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .icon-btn:hover,
+    .icon-btn:focus-visible,
+    .menu-btn:hover,
+    .menu-btn:focus-visible {
+      background: var(--linen);
+      outline: none;
+    }
+
+    .menu-btn {
+      display: none;
+    }
+
+    .nav__actions {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 8px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 690px;
+      display: grid;
+      align-items: end;
+      color: #fff;
+      background:
+        linear-gradient(180deg, rgba(19, 26, 22, .1), rgba(19, 26, 22, .82)),
+        linear-gradient(90deg, rgba(19, 26, 22, .72), rgba(19, 26, 22, .16)),
+        url("https://cdn9.localdatacdn.com/va/arlington/2888156/original/UwykEikC3X.jpg") center/cover no-repeat,
+        #263d34;
+      isolation: isolate;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 155px;
+      background: linear-gradient(180deg, rgba(251, 250, 245, 0), var(--paper));
+      z-index: -1;
+    }
+
+    .hero__inner {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 90px 0 76px;
+      display: grid;
+      gap: 28px;
+    }
+
+    .eyebrow {
+      width: fit-content;
+      margin: 0;
+      padding: 7px 10px;
+      color: #fff;
+      background: rgba(184, 119, 54, .92);
+      border-radius: var(--radius);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    .serif {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.05;
+    }
+
+    h1 {
+      max-width: 880px;
+      margin: 0;
+      font-size: 6.6rem;
+      letter-spacing: 0;
+    }
+
+    .hero__copy {
+      max-width: 690px;
+      margin: 0;
+      color: rgba(255, 255, 255, .92);
+      font-size: 1.25rem;
+    }
+
+    .hero__actions,
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 17px;
+      color: #fff;
+      background: var(--sage);
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(30, 33, 29, .18);
+      outline: none;
+    }
+
+    .btn--brass {
+      background: var(--brass);
+    }
+
+    .btn--light {
+      color: var(--sage);
+      background: rgba(255, 255, 255, .92);
+    }
+
+    .btn--ghost {
+      color: var(--sage);
+      background: transparent;
+      border-color: rgba(39, 63, 54, .28);
+    }
+
+    .btn svg,
+    .icon-btn svg,
+    .menu-btn svg,
+    .brand__mark svg {
+      flex: 0 0 auto;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .quick-panel {
+      width: min(var(--max), calc(100% - 32px));
+      margin: -46px auto 0;
+      position: relative;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: var(--cream);
+      border: 1px solid rgba(30, 33, 29, .12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .quick-item {
+      padding: 22px;
+      min-height: 122px;
+      border-right: 1px solid var(--line);
+    }
+
+    .quick-item:last-child {
+      border-right: 0;
+    }
+
+    .quick-item span {
+      display: block;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .quick-item strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 1.05rem;
+    }
+
+    .quick-item a {
+      text-decoration-color: rgba(39, 63, 54, .35);
+      text-underline-offset: 3px;
+    }
+
+    main section {
+      padding: 88px 0;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+      align-items: end;
+      gap: 32px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 3.85rem;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .intro {
+      padding-top: 84px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      align-items: stretch;
+      gap: 34px;
+    }
+
+    .story-block {
+      padding: 34px;
+      color: #fff;
+      background: var(--sage);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .story-block h2 {
+      margin: 0 0 18px;
+      font-size: 3.5rem;
+    }
+
+    .story-block p {
+      margin: 0 0 18px;
+      color: rgba(255, 255, 255, .88);
+      font-size: 1.06rem;
+    }
+
+    .feature-photo {
+      position: relative;
+      min-height: 520px;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: var(--linen);
+    }
+
+    .feature-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+    }
+
+    .caption-chip {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      max-width: min(360px, calc(100% - 36px));
+      padding: 12px 14px;
+      color: #fff;
+      background: rgba(30, 33, 29, .78);
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: var(--radius);
+      backdrop-filter: blur(10px);
+      font-weight: 800;
+    }
+
+    .department-tools {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      min-height: 40px;
+      padding: 9px 13px;
+      color: var(--sage);
+      background: var(--cream);
+      border: 1px solid rgba(39, 63, 54, .18);
+      border-radius: var(--radius);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .chip[aria-pressed="true"],
+    .chip:hover,
+    .chip:focus-visible {
+      color: #fff;
+      background: var(--sage);
+      outline: none;
+    }
+
+    .search {
+      min-width: min(320px, 100%);
+      min-height: 42px;
+      padding: 10px 12px;
+      color: var(--ink);
+      background: var(--cream);
+      border: 1px solid rgba(39, 63, 54, .18);
+      border-radius: var(--radius);
+    }
+
+    .department-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .dept-card {
+      min-height: 236px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .dept-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 35px rgba(30, 33, 29, .12);
+    }
+
+    .dept-card.is-hidden {
+      display: none;
+    }
+
+    .dept-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      color: var(--sage);
+      background: rgba(90, 124, 98, .14);
+      border-radius: var(--radius);
+    }
+
+    .dept-card:nth-child(2n) .dept-icon {
+      color: var(--brick);
+      background: rgba(148, 72, 57, .12);
+    }
+
+    .dept-card:nth-child(3n) .dept-icon {
+      color: var(--blue);
+      background: rgba(65, 104, 127, .12);
+    }
+
+    .dept-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.42rem;
+    }
+
+    .dept-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tagline {
+      color: var(--brass);
+      font-size: .82rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .services {
+      color: #fff;
+      background: var(--sage);
+    }
+
+    .services .section-head p {
+      color: rgba(255, 255, 255, .76);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .service-card {
+      min-height: 170px;
+      padding: 22px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: var(--radius);
+    }
+
+    .service-card h3 {
+      margin: 0 0 9px;
+      font-size: 1.35rem;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: rgba(255, 255, 255, .78);
+    }
+
+    .service-note {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 352px;
+      color: var(--ink);
+      background: var(--cream);
+      border-radius: var(--radius);
+    }
+
+    .service-note p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .service-note strong {
+      display: block;
+      margin-bottom: 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.55rem;
+      line-height: 1.05;
+    }
+
+    .history-band {
+      background: var(--linen);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .milestone {
+      min-height: 235px;
+      padding: 22px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .milestone span {
+      display: block;
+      margin-bottom: 24px;
+      color: var(--brick);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .milestone h3 {
+      margin: 0 0 8px;
+      font-size: 1.28rem;
+    }
+
+    .milestone p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .review-layout {
+      display: grid;
+      grid-template-columns: 310px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .review-score {
+      position: sticky;
+      top: 102px;
+      padding: 28px;
+      color: #fff;
+      background: var(--brick);
+      border-radius: var(--radius);
+    }
+
+    .review-score strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 4.25rem;
+      line-height: 1;
+    }
+
+    .review-score span {
+      color: rgba(255, 255, 255, .82);
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .review-score p {
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, .84);
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    blockquote {
+      margin: 0;
+      min-height: 254px;
+      padding: 24px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    blockquote p {
+      margin: 0 0 18px;
+      font-size: 1.04rem;
+    }
+
+    blockquote cite {
+      color: var(--muted);
+      font-style: normal;
+      font-weight: 800;
+    }
+
+    .promise {
+      margin-top: 14px;
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+      background: rgba(90, 124, 98, .13);
+      border: 1px solid rgba(39, 63, 54, .17);
+      border-radius: var(--radius);
+    }
+
+    .promise h3 {
+      margin: 0 0 6px;
+      font-size: 1.4rem;
+    }
+
+    .promise p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .visit {
+      background: #fff;
+    }
+
+    .previsit {
+      background: var(--linen);
+    }
+
+    .good-to-know {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .info-card,
+    .faq-item {
+      padding: 22px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .info-card h3,
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.3rem;
+    }
+
+    .info-card p,
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .info-card--action {
+      color: #fff;
+      background: var(--sage);
+      border-color: transparent;
+    }
+
+    .info-card--action p {
+      color: rgba(255, 255, 255, .82);
+      margin-bottom: 18px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .verified-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: .88fr 1.12fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .visit-card {
+      padding: 28px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .visit-card h2 {
+      margin: 0 0 20px;
+      font-size: 3.35rem;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .info-list li {
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .info-list span {
+      display: block;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .info-list strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 1.05rem;
+    }
+
+    .map-wrap {
+      min-height: 550px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--linen);
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 550px;
+      border: 0;
+    }
+
+    .site-footer {
+      color: rgba(255, 255, 255, .82);
+      background: #1d2823;
+    }
+
+    .footer-grid {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 44px 0;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 30px;
+    }
+
+    .footer-grid h2,
+    .footer-grid h3 {
+      margin: 0 0 12px;
+      color: #fff;
+    }
+
+    .footer-grid p {
+      margin: 0;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: end;
+      align-items: start;
+    }
+
+    .footer-links a {
+      padding: 8px 10px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: var(--radius);
+      text-decoration: none;
+    }
+
+    .source-note {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 17px 0 28px;
+      color: rgba(255, 255, 255, .58);
+      border-top: 1px solid rgba(255, 255, 255, .12);
+      font-size: .86rem;
+    }
+
+    @media (max-width: 960px) {
+      .topbar__inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .topbar__inner span:last-child {
+        display: none;
+      }
+
+      .nav {
+        position: relative;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding-right: 56px;
+      }
+
+      .nav__actions {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .nav__links {
+        position: fixed;
+        inset: 116px 16px auto;
+        display: none;
+        padding: 12px;
+        flex-direction: column;
+        align-items: stretch;
+        background: var(--cream);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .nav__links.is-open {
+        display: flex;
+      }
+
+      .nav__links a {
+        color: var(--ink);
+      }
+
+      .menu-btn {
+        display: inline-grid;
+      }
+
+      .quick-panel,
+      .department-grid,
+      .timeline,
+      .good-to-know,
+      .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quick-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .quick-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .section-head,
+      .intro-grid,
+      .service-grid,
+      .review-layout,
+      .visit-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .review-score {
+        position: static;
+      }
+
+      .footer-links {
+        justify-content: start;
+      }
+
+      h1 {
+        font-size: 5.15rem;
+      }
+
+      .section-head h2,
+      .story-block h2,
+      .visit-card h2 {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        width: min(var(--max), calc(100% - 24px));
+        min-height: 74px;
+      }
+
+      .brand {
+        gap: 9px;
+        min-width: 0;
+      }
+
+      .brand__text {
+        min-width: 0;
+      }
+
+      .brand__mark {
+        width: 42px;
+        height: 42px;
+      }
+
+      .brand__name {
+        font-size: 1.18rem;
+        white-space: normal;
+      }
+
+      .brand__tag,
+      .nav__actions .icon-btn {
+        display: none;
+      }
+
+      .menu-btn {
+        display: inline-grid !important;
+        color: #fff;
+        background: var(--sage);
+        border-color: var(--sage);
+      }
+
+      .hero {
+        min-height: 640px;
+      }
+
+      .hero__inner {
+        padding: 80px 0 70px;
+      }
+
+      .hero__copy {
+        font-size: 1.05rem;
+      }
+
+      .section-head h2,
+      .story-block h2,
+      .visit-card h2,
+      .service-note strong {
+        font-size: 2.45rem;
+      }
+
+      .hero__actions .btn,
+      .cta-row .btn,
+      .promise .btn {
+        width: 100%;
+      }
+
+      .quick-panel,
+      .department-grid,
+      .service-list,
+      .timeline,
+      .quote-grid,
+      .good-to-know,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .quick-item:last-child {
+        border-bottom: 0;
+      }
+
+      main section {
+        padding: 64px 0;
+      }
+
+      .story-block,
+      .visit-card,
+      .review-score,
+      .service-note {
+        padding: 24px;
+      }
+
+      .feature-photo,
+      .map-wrap,
+      .map-wrap iframe {
+        min-height: 380px;
+      }
+
+      .promise {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: 8.4ch;
+        font-size: 3.55rem;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .brand__name {
+        font-size: 1.08rem;
+      }
+
+      h1 {
+        max-width: 8.25ch;
+        font-size: 3.1rem;
+      }
+
+      .eyebrow {
+        font-size: .72rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      h1 {
+        font-size: 2.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="topbar" role="banner">
+    <div class="topbar__inner">
+      <span>5853 Washington Blvd, Arlington, VA 22205</span>
+      <span>Open daily. Call <a href="tel:+17035385678">(703) 538-5678</a> to confirm hours and repair availability.</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Ayers Variety and Hardware home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14.5 4.5 19 9l-2 2-1.25-1.25-7.5 7.5L5 18.5l1.25-3.25 7.5-7.5L12.5 6.5l2-2Z"></path><path d="m5 19 4-1"></path></svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Ayers Variety & Hardware</span>
+          <span class="brand__tag">Westover since 1948</span>
+        </span>
+      </a>
+
+      <div class="nav__links" id="navLinks">
+        <a href="#departments">Departments</a>
+        <a href="#services">Services</a>
+        <a href="#history">History</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#visit">Visit</a>
+      </div>
+
+      <div class="nav__actions">
+        <a class="icon-btn" href="tel:+17035385678" aria-label="Call Ayers Variety and Hardware">
+          <svg viewBox="0 0 24 24" width="21" height="21"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.11 5.18 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.63 2.6a2 2 0 0 1-.45 2.11L9 10.7a16 16 0 0 0 4.3 4.3l1.27-1.27a2 2 0 0 1 2.11-.45c.83.3 1.7.51 2.6.63A2 2 0 0 1 22 16.92Z"></path></svg>
+        </a>
+        <a class="icon-btn" href="https://www.facebook.com/people/Ayers-Variety-Hardware/100063525071620/" target="_blank" rel="noopener" aria-label="Open Ayers Variety and Hardware on Facebook">
+          <svg viewBox="0 0 24 24" width="21" height="21"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"></path></svg>
+        </a>
+        <button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <svg viewBox="0 0 24 24" width="23" height="23"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <p class="eyebrow">Westover's neighborhood general store</p>
+        <h1 id="hero-title">Ayers Variety & Hardware</h1>
+        <p class="hero__copy">For older homes, stubborn repairs, one-off screws, friendly know-how, and the useful little things big-box aisles make hard to find.</p>
+        <div class="hero__actions" aria-label="Primary actions">
+          <a class="btn btn--brass" href="https://www.google.com/maps/dir/?api=1&destination=Ayers+Variety+%26+Hardware+5853+Washington+Blvd+Arlington+VA+22205" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+            Get directions
+          </a>
+          <a class="btn btn--light" href="#departments">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+            Browse departments
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <aside class="quick-panel" aria-label="Store quick facts">
+      <div class="quick-item">
+        <span>Location</span>
+        <strong>5853 Washington Blvd<br>Arlington, VA</strong>
+      </div>
+      <div class="quick-item">
+        <span>Phone</span>
+        <strong><a href="tel:+17035385678">(703) 538-5678</a></strong>
+      </div>
+      <div class="quick-item">
+        <span>Listed Hours</span>
+        <strong>Mon-Sat 8:30-5:30<br>Sun 10-5:30</strong>
+      </div>
+      <div class="quick-item">
+        <span>Known For</span>
+        <strong>Hardware, housewares, gifts, garden, and local advice</strong>
+      </div>
+    </aside>
+
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="container intro-grid">
+        <div class="story-block">
+          <h2 id="intro-title">The place you try before the giant aisle.</h2>
+          <p>If your home was built when local hardware stores were the first stop for a broken board, a faulty faucet, or an electrical fix, Ayers still feels familiar.</p>
+          <p>Neighbors praise the old-school value: helpful people, practical history, and the chance to buy one of what you need instead of a whole box.</p>
+          <div class="cta-row">
+            <a class="btn btn--brass" href="#visit">Plan a visit</a>
+            <a class="btn btn--light" href="https://www.facebook.com/people/Ayers-Variety-Hardware/100063525071620/" target="_blank" rel="noopener">Current Facebook page</a>
+          </div>
+        </div>
+        <figure class="feature-photo">
+          <img src="https://cdn4.localdatacdn.com/va/arlington/2888156/original/Geb1vpmmZz.jpg" alt="Ayers Variety and Hardware storefront in Westover" loading="lazy">
+          <figcaption class="caption-chip">A distinctive Westover storefront with practical finds from screws to seasonal goods.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="departments" aria-labelledby="departments-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="departments-title">Browse The Aisles</h2>
+          <p>Part hardware store, part variety shop. Use the filters to find the corner of the store that fits today's errand.</p>
+        </div>
+
+        <div class="department-tools" aria-label="Department browser controls">
+          <div class="filter-group" role="group" aria-label="Filter departments">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-filter="repair" aria-pressed="false">Repair</button>
+            <button class="chip" type="button" data-filter="home" aria-pressed="false">Home</button>
+            <button class="chip" type="button" data-filter="seasonal" aria-pressed="false">Seasonal</button>
+          </div>
+          <label>
+            <span class="skip-link">Search departments</span>
+            <input class="search" id="departmentSearch" type="search" placeholder="Search hardware, gifts, paint..." autocomplete="off">
+          </label>
+        </div>
+
+        <div class="department-grid" id="departmentGrid">
+          <article class="dept-card" data-category="repair" data-keywords="screws fasteners hardware nails hinges bolts washers">
+            <div>
+              <div class="dept-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M7 7h10v10H7z"></path><path d="M4 4h4"></path><path d="M16 4h4"></path><path d="M4 20h4"></path><path d="M16 20h4"></path></svg></div>
+              <h3>Fasteners & Hardware</h3>
+              <p>Screws, bolts, washers, hinges, hooks, and small parts for the exact fix in front of you.</p>
+            </div>
+            <span class="tagline">Buy the piece</span>
+          </article>
+
+          <article class="dept-card" data-category="repair" data-keywords="plumbing faucet pipe drain toilet sink washer repair">
+            <div>
+              <div class="dept-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M9 4h6v5H9z"></path><path d="M12 9v11"></path><path d="M7 14h10"></path><path d="M5 20h14"></path></svg></div>
+              <h3>Plumbing Fixes</h3>
+              <p>Faucet parts, washers, pipe fittings, sealants, and the advice that keeps a small leak small.</p>
+            </div>
+            <span class="tagline">Ask first</span>
+          </article>
+
+          <article class="dept-card" data-category="repair" data-keywords="electrical lamp cord switch bulb outlet extension">
+            <div>
+              <div class="dept-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M13 2 4 14h7l-1 8 9-12h-7z"></path></svg></div>
+              <h3>Electrical & Lamps</h3>
+              <p>Cords, bulbs, switches, plugs, and customer-reported lamp repair help when available.</p>
+            </div>
+            <span class="tagline">Call to confirm</span>
+          </article>
+
+          <article class="dept-card" data-category="repair home" data-keywords="paint brush rollers tape caulk patch home maintenance">
+            <div>
+              <div class="dept-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 7h11a3 3 0 0 1 0 6H9"></path><path d="M9 13v8"></path><path d="M7 21h4"></path><path d="M17 10h3v4"></path></svg></div>
+              <h3>Paint & Maintenance</h3>
+              <p>Brushes, tape, caulk, patching supplies, cleaners, and everyday upkeep essentials.</p>
+            </div>
+            <span class="tagline">Weekend ready</span>
+          </article>
+
+          <article class="dept-card" data-category="home" data-keywords="kitchen housewares cleaning storage home decor">
+            <div>
+              <div class="dept-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M6 3v18"></path><path d="M10 3v6a4 4 0 0 1-8 0V3"></path><path d="M18 3v18"></path><path d="M14 7h8"></path></svg></div>
+              <h3>Kitchen & Housewares</h3>
+              <p>Useful goods for cooking, cleaning, storage, laundry, and the daily rhythm of home.</p>
+            </div>
+            <span class="tagline">Practical finds</span>
+          </article>
+
+          <article class="dept-card" data-category="home seasonal" data-keywords="cards gifts toys school supplies craft kids seasonal">
+            <div>
+              <div class="dept-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M20 12v10H4V12"></path><path d="M2 7h20v5H2z"></path><path d="M12 22V7"></path><path d="M12 7H7.5a2.5 2.5 0 1 1 2.12-3.83L12 7Z"></path><path d="M12 7h4.5a2.5 2.5 0 1 0-2.12-3.83L12 7Z"></path></svg></div>
+              <h3>Gifts, Toys & Cards</h3>
+              <p>Greeting cards, toys, craft supplies, school items, and unexpected variety-store discoveries.</p>
+            </div>
+            <span class="tagline">The fun aisle</span>
+          </article>
+
+          <article class="dept-card" data-category="seasonal home" data-keywords="garden lawn plants seeds soil tools seasonal outdoor">
+            <div>
+              <div class="dept-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 22V12"></path><path d="M12 12c-5 0-8-2.5-8-7 5 0 8 2.5 8 7Z"></path><path d="M12 12c5 0 8-2.5 8-7-5 0-8 2.5-8 7Z"></path></svg></div>
+              <h3>Garden & Seasonal</h3>
+              <p>Garden basics, outdoor supplies, seasonal plants, lawn decorations, and weather-ready odds and ends.</p>
+            </div>
+            <span class="tagline">Changes often</span>
+          </article>
+
+          <article class="dept-card" data-category="repair home" data-keywords="made in usa local alternatives quality goods tools">
+            <div>
+              <div class="dept-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 3 3 8l9 5 9-5-9-5Z"></path><path d="m3 8 9 5v8l-9-5V8Z"></path><path d="m21 8-9 5v8l9-5V8Z"></path></svg></div>
+              <h3>Curated Goods</h3>
+              <p>Useful home merchandise and customer-noted alternatives to mass-market sameness.</p>
+            </div>
+            <span class="tagline">Chosen locally</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="services-title">Help Behind The Counter</h2>
+          <p>People come for the item. They come back because someone can usually tell them how it should come together.</p>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-list">
+            <article class="service-card">
+              <h3>Problem Solving</h3>
+              <p>Bring the broken part, the odd screw, or the project question. The counter is part of the product.</p>
+            </article>
+            <article class="service-card">
+              <h3>One-Off Quantities</h3>
+              <p>For many small hardware needs, neighbors appreciate buying the piece instead of committing to a whole box.</p>
+            </article>
+            <article class="service-card">
+              <h3>Small Repairs</h3>
+              <p>Reviews mention lamp repair help. Call ahead for current repair availability, timing, and pricing.</p>
+            </article>
+            <article class="service-card">
+              <h3>Local Knowledge</h3>
+              <p>Old homes, Westover routines, seasonal needs, and the kind of advice that comes from knowing the neighborhood.</p>
+            </article>
+          </div>
+
+          <aside class="service-note">
+            <div>
+              <strong>Bring the part. Ask the question. Leave with a plan.</strong>
+              <p>The Ayers experience is old-school in the best way: useful information, reasonable prices, and shelves curated for real Arlington homes.</p>
+            </div>
+            <a class="btn btn--brass" href="tel:+17035385678">Call the store</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="history-band" id="history" aria-labelledby="history-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="history-title">A Westover Original</h2>
+          <p>Ayers has been part of Arlington's business landscape for generations, with a history that explains why the store still feels personal.</p>
+        </div>
+        <div class="timeline" aria-label="Ayers history timeline">
+          <article class="milestone">
+            <span>1948</span>
+            <h3>Founded by John W. Ayers</h3>
+            <p>The World War II veteran opened J. W. Ayers Five and Ten Cents Store on Washington Boulevard.</p>
+          </article>
+          <article class="milestone">
+            <span>1960s</span>
+            <h3>The Mayor of Westover</h3>
+            <p>Ayers supported schools, scouts, civic groups, sidewalks, streetlights, and neighborhood events.</p>
+          </article>
+          <article class="milestone">
+            <span>1977</span>
+            <h3>Continued Locally</h3>
+            <p>The Kaplan family bought the store from the Ayers estate and kept its quirky, practical spirit alive.</p>
+          </article>
+          <article class="milestone">
+            <span>2025</span>
+            <h3>Readers' Choice Favorite</h3>
+            <p>ARLnow readers ranked Ayers as a top Arlington hardware store for selection, quality, expertise, and service.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="reviews-title">What Neighbors Notice</h2>
+          <p>Community reviews consistently point to helpful staff, surprising variety, historical character, and a store worth trying before the big-box run.</p>
+        </div>
+
+        <div class="review-layout">
+          <aside class="review-score" aria-label="Review summary">
+            <strong>75+</strong>
+            <span>Years in Westover</span>
+            <p>Review themes include personal help, convenient small-business shopping, reasonable prices, and the kind of inventory that rewards a walk through the aisles.</p>
+          </aside>
+
+          <div>
+            <div class="quote-grid">
+              <blockquote>
+                <p>"The people know their stuff: local history, what item would help solve your problem, and useful info on how it should all come together."</p>
+                <cite>Sally M., Arlington</cite>
+              </blockquote>
+              <blockquote>
+                <p>"They completed the lamp fix in two business days and only charged me $8."</p>
+                <cite>Ron B., Arlington</cite>
+              </blockquote>
+              <blockquote>
+                <p>"Excellent help in selecting products. Very pleasant and friendly staff."</p>
+                <cite>Denny C., Yarmouth</cite>
+              </blockquote>
+              <blockquote>
+                <p>"A hidden gem, an asset to the community. And reasonable prices, too."</p>
+                <cite>Joan S., Arlington</cite>
+              </blockquote>
+            </div>
+
+            <aside class="promise">
+              <div>
+                <h3>Service works best face-to-face.</h3>
+                <p>For returns, repairs, special needs, service animals, or weather disruptions, call before visiting so the staff can confirm the current policy and best next step.</p>
+              </div>
+              <a class="btn btn--ghost" href="tel:+17035385678">Confirm details</a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="previsit" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="faq-title">Before You Go</h2>
+          <p>A few practical notes make a small-store visit easier: call ahead for anything time-sensitive, bring the part you are replacing, and confirm current details when it matters.</p>
+        </div>
+
+        <div class="good-to-know" aria-label="Store visit details">
+          <article class="info-card">
+            <h3>Last Verified</h3>
+            <p>Phone, address, and listed hours were checked in May 2026. Hours and services can still change day to day.</p>
+          </article>
+          <article class="info-card">
+            <h3>Parking</h3>
+            <p>Westover has neighborhood street and shopping-area parking nearby. Check posted signs before leaving your car.</p>
+          </article>
+          <article class="info-card">
+            <h3>Payments</h3>
+            <p>For large purchases, special orders, or contactless payment needs, call ahead so the staff can confirm the best option.</p>
+          </article>
+          <article class="info-card info-card--action">
+            <h3>Google Reviews</h3>
+            <p>Read recent public feedback or leave a review after your visit.</p>
+            <a class="btn btn--brass" href="https://www.google.com/search?q=Ayers+Variety+%26+Hardware+5853+Washington+Blvd+reviews" target="_blank" rel="noopener">Open Google</a>
+          </article>
+        </div>
+
+        <div class="section-head" style="margin-top: 54px;">
+          <h2>FAQ</h2>
+          <p>Quick answers for common errands, repairs, and first-time visits.</p>
+        </div>
+
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>Can I buy individual screws or small parts?</h3>
+            <p>Many neighbors choose Ayers because they can often buy just what the repair needs instead of a whole box.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Do they repair lamps?</h3>
+            <p>Customer reviews mention lamp repair help. Call first to confirm current repair availability, timing, and pricing.</p>
+          </article>
+          <article class="faq-item">
+            <h3>What should I bring for repair advice?</h3>
+            <p>Bring the broken part, old fastener, fixture piece, photo, or measurements. The more context you bring, the easier it is to match.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Is the store only hardware?</h3>
+            <p>No. The variety side includes practical housewares, gifts, cards, toys, seasonal goods, and home basics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="container visit-grid">
+        <div class="visit-card">
+          <h2 id="visit-title">Visit Ayers</h2>
+          <ul class="info-list">
+            <li>
+              <span>Address</span>
+              <strong>5853 Washington Blvd, Arlington, VA 22205</strong>
+            </li>
+            <li>
+              <span>Phone</span>
+              <strong><a href="tel:+17035385678">(703) 538-5678</a></strong>
+            </li>
+            <li>
+              <span>Listed hours</span>
+              <strong>Monday-Saturday 8:30 AM-5:30 PM<br>Sunday 10:00 AM-5:30 PM</strong>
+            </li>
+            <li>
+              <span>Accessibility</span>
+              <strong>Call ahead for service accommodations or help with a specific visit.</strong>
+            </li>
+            <li>
+              <span>Online</span>
+              <strong><a href="https://rohan-website.github.io/ayers/">Website</a><br><a href="https://www.facebook.com/people/Ayers-Variety-Hardware/100063525071620/" target="_blank" rel="noopener">Facebook page</a></strong>
+            </li>
+          </ul>
+          <div class="cta-row" style="margin-top: 24px;">
+            <a class="btn btn--brass" href="https://www.google.com/maps/dir/?api=1&destination=Ayers+Variety+%26+Hardware+5853+Washington+Blvd+Arlington+VA+22205" target="_blank" rel="noopener">Directions</a>
+            <a class="btn btn--ghost" href="tel:+17035385678">Call first</a>
+          </div>
+        </div>
+        <div class="map-wrap" aria-label="Map to Ayers Variety and Hardware">
+          <iframe title="Map showing Ayers Variety and Hardware in Arlington, Virginia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Ayers%20Variety%20%26%20Hardware%205853%20Washington%20Blvd%20Arlington%20VA%2022205&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h2 class="serif">Ayers Variety & Hardware</h2>
+        <p>Westover's practical, personal, old-school hardware and variety store.</p>
+      </div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="#departments">Departments</a>
+        <a href="#history">History</a>
+        <a href="#faq">FAQ</a>
+        <a href="#visit">Visit</a>
+        <a href="https://www.facebook.com/people/Ayers-Variety-Hardware/100063525071620/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <p class="source-note">Ayers Variety & Hardware is a neighborhood store in Westover, Arlington. Business details last verified May 2026; call before visiting for time-sensitive repairs, returns, accessibility needs, or special purchase questions.</p>
+  </footer>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HardwareStore",
+      "name": "Ayers Variety & Hardware",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5853 Washington Blvd",
+        "addressLocality": "Arlington",
+        "addressRegion": "VA",
+        "postalCode": "22205",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-703-538-5678",
+      "url": "https://rohan-website.github.io/ayers/",
+      "hasMap": "https://www.google.com/maps?q=Ayers%20Variety%20%26%20Hardware%205853%20Washington%20Blvd%20Arlington%20VA%2022205",
+      "image": "https://cdn9.localdatacdn.com/va/arlington/2888156/original/UwykEikC3X.jpg",
+      "sameAs": [
+        "https://www.facebook.com/people/Ayers-Variety-Hardware/100063525071620/"
+      ],
+      "openingHours": ["Mo-Sa 08:30-17:30", "Su 10:00-17:30"]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I buy individual screws or small parts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many neighbors choose Ayers because they can often buy just what the repair needs instead of a whole box."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do they repair lamps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Customer reviews mention lamp repair help. Call first to confirm current repair availability, timing, and pricing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I bring for repair advice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bring the broken part, old fastener, fixture piece, photo, or measurements. The more context you bring, the easier it is to match."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the store only hardware?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The variety side includes practical housewares, gifts, cards, toys, seasonal goods, and home basics."
+          }
+        }
+      ]
+    }
+  </script>
+  <script>
+    const menuButton = document.querySelector(".menu-btn");
+    const navLinks = document.querySelector("#navLinks");
+
+    menuButton?.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("is-open");
+      document.body.classList.toggle("menu-open", isOpen);
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navLinks?.addEventListener("click", (event) => {
+      if (event.target.matches("a")) {
+        navLinks.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+        menuButton?.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    const chips = [...document.querySelectorAll("[data-filter]")];
+    const cards = [...document.querySelectorAll(".dept-card")];
+    const search = document.querySelector("#departmentSearch");
+    let currentFilter = "all";
+
+    function updateDepartments() {
+      const query = search.value.trim().toLowerCase();
+      cards.forEach((card) => {
+        const categoryMatch = currentFilter === "all" || card.dataset.category.includes(currentFilter);
+        const haystack = `${card.textContent} ${card.dataset.keywords}`.toLowerCase();
+        const searchMatch = !query || haystack.includes(query);
+        card.classList.toggle("is-hidden", !(categoryMatch && searchMatch));
+      });
+    }
+
+    chips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        currentFilter = chip.dataset.filter;
+        chips.forEach((item) => item.setAttribute("aria-pressed", String(item === chip)));
+        updateDepartments();
+      });
+    });
+
+    search?.addEventListener("input", updateDepartments);
+  </script>
+</body>
+</html>
